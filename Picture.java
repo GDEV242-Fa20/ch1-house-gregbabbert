@@ -1,5 +1,7 @@
 /**
- * This class is used to draw a simple
+ * This class is used to draw a simple picture of a person
+ * next to a big head. There will also be a method that lets
+ * the head eat the person.
  * 
  * @author  Greg Babbert
  * @version 2020.09.10
