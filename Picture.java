@@ -8,7 +8,9 @@ public class Picture
 {
     private Square wall;
     private Square window;
-    private Triangle roof;
+    private Triangle mouth;
+    private Triangle eyebrow1;
+    private Triangle eyebrow2;
     private Circle head1;
     private Circle head2;
     private Circle pupil1;
@@ -23,7 +25,9 @@ public class Picture
     {
         wall = new Square();
         window = new Square();
-        roof = new Triangle();  
+        mouth = new Triangle();
+        eyebrow1 = new Triangle();
+        eyebrow2 = new Triangle();
         head1 = new Circle();
         head2 = new Circle();
         pupil1 = new Circle();
@@ -38,23 +42,6 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            // wall.moveHorizontal(-140);
-            // wall.moveVertical(20);
-            // wall.changeSize(120);
-            // wall.changeColor("red");
-            // wall.makeVisible();
-            
-            // window.changeColor("black");
-            // window.moveHorizontal(-120);
-            // window.moveVertical(40);
-            // window.changeSize(40);
-            // window.makeVisible();
-    
-            // roof.changeSize(60, 180);
-            // roof.moveHorizontal(20);
-            // roof.moveVertical(-60);
-            // roof.makeVisible();
-
             head1.changeColor("red");
             head1.moveHorizontal(-200);
             head1.moveVertical(-30);
@@ -73,6 +60,12 @@ public class Picture
             lowerHead.changeColor("red");
             lowerHead.makeVisible();
             
+            mouth.changeColor("black");
+            mouth.changeSize(50, 100);
+            mouth.moveHorizontal(-90);
+            mouth.moveVertical(60);
+            mouth.makeVisible();
+            
             pupil1.changeColor("blue");
             pupil1.moveHorizontal(-180);
             pupil1.moveVertical(0);
@@ -84,6 +77,18 @@ public class Picture
             pupil2.moveVertical(0);
             pupil2.changeSize(60);
             pupil2.makeVisible();
+            
+            eyebrow1.changeColor("green");
+            eyebrow1.changeSize(50, 120);
+            eyebrow1.moveHorizontal(-130);
+            eyebrow1.moveVertical(-100);
+            eyebrow1.makeVisible();
+            
+            eyebrow2.changeColor("green");
+            eyebrow2.changeSize(50, 120);
+            eyebrow2.moveHorizontal(-50);
+            eyebrow2.moveVertical(-100);
+            eyebrow2.makeVisible();
             drawn = true;
         }
     }
@@ -95,7 +100,7 @@ public class Picture
     {
         wall.changeColor("black");
         window.changeColor("white");
-        roof.changeColor("black");
+        mouth.changeColor("black");
         head1.changeColor("black");
     }
 
@@ -106,7 +111,7 @@ public class Picture
     {
         wall.changeColor("red");
         window.changeColor("black");
-        roof.changeColor("green");
+        mouth.changeColor("green");
         head1.changeColor("yellow");
     }
 }
