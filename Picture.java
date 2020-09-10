@@ -16,6 +16,7 @@ public class Picture
     private Circle pupil1;
     private Circle pupil2;
     private Square lowerHead;
+    private Person person;
     private boolean drawn;
 
     /**
@@ -33,6 +34,7 @@ public class Picture
         pupil1 = new Circle();
         pupil2 = new Circle();
         lowerHead = new Square();
+        person = new Person();
         drawn = false;
     }
 
@@ -89,6 +91,12 @@ public class Picture
             eyebrow2.moveHorizontal(-50);
             eyebrow2.moveVertical(-100);
             eyebrow2.makeVisible();
+            
+            
+            person.moveHorizontal(100);
+            person.moveVertical(30);
+            person.changeSize(70, 38);
+            person.makeVisible();
             drawn = true;
         }
     }
