@@ -11,6 +11,7 @@ public class Picture
     private Triangle roof;
     private Circle head1;
     private Circle head2;
+    private Square lowerHead;
     private boolean drawn;
 
     /**
@@ -23,6 +24,7 @@ public class Picture
         roof = new Triangle();  
         head1 = new Circle();
         head2 = new Circle();
+        lowerHead = new Square();
         drawn = false;
     }
 
@@ -60,6 +62,12 @@ public class Picture
             head2.moveVertical(-30);
             head2.changeSize(100);
             head2.makeVisible();
+            
+            lowerHead.moveHorizontal(-240);
+            lowerHead.moveVertical(20);
+            lowerHead.changeSize(100);
+            lowerHead.changeColor("red");
+            lowerHead.makeVisible();
             drawn = true;
         }
     }
