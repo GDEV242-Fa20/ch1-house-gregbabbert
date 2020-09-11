@@ -130,4 +130,14 @@ public class Picture
         mouth.changeColor("black");
         person.changeColor("black");
     }
+    
+    
+    /**
+     * This method makes the head eat the person
+     */
+    public void eatPerson()
+    {
+        person.slowMoveHorizontal(-250);
+        person.makeInvisible();
+    }
 }
