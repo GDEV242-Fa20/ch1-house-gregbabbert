@@ -104,14 +104,14 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        lowerHead.changeColor("white");
+        lowerHead.changeColor("black");
         head1.changeColor("white");
         head2.changeColor("white");
         pupil1.changeColor("black");
         pupil2.changeColor("black");
         eyebrow1.changeColor("black");
         eyebrow2.changeColor("black");
-        mouth.changeColor("white");
+        mouth.changeColor("black");
         person.changeColor("black");
     }
 
