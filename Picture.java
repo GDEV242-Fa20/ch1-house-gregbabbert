@@ -8,8 +8,6 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
     private Triangle mouth;
     private Triangle eyebrow1;
     private Triangle eyebrow2;
@@ -26,8 +24,6 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
         mouth = new Triangle();
         eyebrow1 = new Triangle();
         eyebrow2 = new Triangle();
@@ -108,10 +104,15 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        mouth.changeColor("black");
-        head1.changeColor("black");
+        lowerHead.changeColor("white");
+        head1.changeColor("white");
+        head2.changeColor("white");
+        pupil1.changeColor("black");
+        pupil2.changeColor("black");
+        eyebrow1.changeColor("black");
+        eyebrow2.changeColor("black");
+        mouth.changeColor("white");
+        person.changeColor("black");
     }
 
     /**
@@ -119,9 +120,14 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        mouth.changeColor("green");
-        head1.changeColor("yellow");
+        lowerHead.changeColor("red");
+        head1.changeColor("red");
+        head2.changeColor("red");
+        pupil1.changeColor("blue");
+        pupil2.changeColor("blue");
+        eyebrow1.changeColor("green");
+        eyebrow2.changeColor("green");
+        mouth.changeColor("black");
+        person.changeColor("black");
     }
 }
