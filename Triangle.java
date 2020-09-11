@@ -159,8 +159,8 @@ public class Triangle
     }
 
     /**
-     * Change the color. Valid colors are "red", "yellow", "blue", "green",
-     * "magenta" and "black".
+     * Change the color. Valid colors are "red", "light-blue", "yellow", "blue",
+     * "green", "magenta" and "black".
      */
     public void changeColor(String newColor)
     {

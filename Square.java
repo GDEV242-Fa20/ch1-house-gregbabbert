@@ -156,8 +156,8 @@ public class Square
     }
 
     /**
-     * Change the color. Valid colors are "red", "yellow", "blue", "green",
-     * "magenta" and "black".
+     * Change the color. Valid colors are "red", "yellow", "blue", "light-blue",
+     * "green", "magenta" and "black".
      */
     public void changeColor(String newColor)
     {

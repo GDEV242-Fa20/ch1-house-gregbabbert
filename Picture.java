@@ -66,13 +66,13 @@ public class Picture
             mouth.moveVertical(60);
             mouth.makeVisible();
             
-            pupil1.changeColor("blue");
+            pupil1.changeColor("light-blue");
             pupil1.moveHorizontal(-180);
             pupil1.moveVertical(0);
             pupil1.changeSize(60);
             pupil1.makeVisible();
             
-            pupil2.changeColor("blue");
+            pupil2.changeColor("light-blue");
             pupil2.moveHorizontal(-100);
             pupil2.moveVertical(0);
             pupil2.changeSize(60);
@@ -123,8 +123,8 @@ public class Picture
         lowerHead.changeColor("red");
         head1.changeColor("red");
         head2.changeColor("red");
-        pupil1.changeColor("blue");
-        pupil2.changeColor("blue");
+        pupil1.changeColor("light-blue");
+        pupil2.changeColor("light-blue");
         eyebrow1.changeColor("green");
         eyebrow2.changeColor("green");
         mouth.changeColor("black");
