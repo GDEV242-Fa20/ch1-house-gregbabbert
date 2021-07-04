@@ -1,20 +1,22 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
+ * This class is used to draw a simple picture of a person
+ * next to a big head. There will also be a method that lets
+ * the head eat the person.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Greg Babbert
+ * @version 2020.09.10
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Triangle mouth;
+    private Triangle eyebrow1;
+    private Triangle eyebrow2;
+    private Circle head1;
+    private Circle head2;
+    private Circle pupil1;
+    private Circle pupil2;
+    private Square lowerHead;
+    private Person person;
     private boolean drawn;
 
     /**
@@ -22,10 +24,15 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        mouth = new Triangle();
+        eyebrow1 = new Triangle();
+        eyebrow2 = new Triangle();
+        head1 = new Circle();
+        head2 = new Circle();
+        pupil1 = new Circle();
+        pupil2 = new Circle();
+        lowerHead = new Square();
+        person = new Person();
         drawn = false;
     }
 
@@ -35,28 +42,59 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.changeColor("blue");
-            wall.makeVisible();
+            head1.changeColor("red");
+            head1.moveHorizontal(-200);
+            head1.moveVertical(-30);
+            head1.changeSize(100);
+            head1.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            head2.changeColor("red");
+            head2.moveHorizontal(-120);
+            head2.moveVertical(-30);
+            head2.changeSize(100);
+            head2.makeVisible();
+            
+            lowerHead.moveHorizontal(-240);
+            lowerHead.moveVertical(20);
+            lowerHead.changeSize(100);
+            lowerHead.changeColor("red");
+            lowerHead.makeVisible();
+            
+            mouth.changeColor("black");
+            mouth.changeSize(50, 100);
+            mouth.moveHorizontal(-90);
+            mouth.moveVertical(60);
+            mouth.makeVisible();
+            
+            pupil1.changeColor("light-blue");
+            pupil1.moveHorizontal(-180);
+            pupil1.moveVertical(0);
+            pupil1.changeSize(60);
+            pupil1.makeVisible();
+            
+            pupil2.changeColor("light-blue");
+            pupil2.moveHorizontal(-100);
+            pupil2.moveVertical(0);
+            pupil2.changeSize(60);
+            pupil2.makeVisible();
+            
+            eyebrow1.changeColor("green");
+            eyebrow1.changeSize(50, 120);
+            eyebrow1.moveHorizontal(-130);
+            eyebrow1.moveVertical(-100);
+            eyebrow1.makeVisible();
+            
+            eyebrow2.changeColor("green");
+            eyebrow2.changeSize(50, 120);
+            eyebrow2.moveHorizontal(-50);
+            eyebrow2.moveVertical(-100);
+            eyebrow2.makeVisible();
+            
+            
+            person.moveHorizontal(100);
+            person.moveVertical(30);
+            person.changeSize(70, 38);
+            person.makeVisible();
             drawn = true;
         }
     }
@@ -66,10 +104,15 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
+        lowerHead.changeColor("black");
+        head1.changeColor("white");
+        head2.changeColor("white");
+        pupil1.changeColor("black");
+        pupil2.changeColor("black");
+        eyebrow1.changeColor("black");
+        eyebrow2.changeColor("black");
+        mouth.changeColor("black");
+        person.changeColor("black");
     }
 
     /**
@@ -77,9 +120,24 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
+        lowerHead.changeColor("red");
+        head1.changeColor("red");
+        head2.changeColor("red");
+        pupil1.changeColor("light-blue");
+        pupil2.changeColor("light-blue");
+        eyebrow1.changeColor("green");
+        eyebrow2.changeColor("green");
+        mouth.changeColor("black");
+        person.changeColor("black");
+    }
+    
+    
+    /**
+     * This method makes the head eat the person
+     */
+    public void eatPerson()
+    {
+        person.slowMoveHorizontal(-250);
+        person.makeInvisible();
     }
 }
